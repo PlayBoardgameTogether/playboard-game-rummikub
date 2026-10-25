@@ -1,0 +1,9 @@
+{
+  "repository": "PlayBoardgameTogether/playboard-game-rummikub",
+  "assets": [
+    {
+      "id": "online.rummikub",
+      "archive": "rummikub"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "repository": "PlayBoardgameTogether/PlayBoardgameTogether",
+  "commit": "a7e36d32e2febeb5bd7013752f099d01d0502316",
+  "game": "rummikub",
+  "platformVersion": "0.17.0",
+  "sdkVersion": "0.1.0",
+  "ownedFiles": [
+    "game-packages/rummikub/README.md",
+    "game-packages/rummikub/art/cover.svg",
+    "game-packages/rummikub/art/icon.svg",
+    "game-packages/rummikub/client.html",
+    "game-packages/rummikub/game.json",
+    "game-packages/rummikub/server.txt",
+    "game-packages/rummikub/shared.txt",
+    "scripts/package-rummikub.mjs",
+    "scripts/rummikub-package.mjs",
+    "tests/unit/rummikub-package.test.ts",
+    "docs/games/rummikub.md"
+  ],
+  "files": {
+    "game-packages/rummikub/README.md": "644ad2b8b2b540ab0a63294500b8a8691ae08fae63193955ef982a525c4b3652",
+    "game-packages/rummikub/art/cover.svg": "6df669daede19ec86f544ec86f805f0375817aa36a0135e14a5e80406c9035b8",
+    "game-packages/rummikub/art/icon.svg": "19dd5c44b62ea404f0f3a9bff7ac22322d4e245e34651216d249380cf1385fa7",
+    "game-packages/rummikub/client.html": "f39e22fa1342a677b3deabf027f5707d3ed5994e65b8f408ebf7dadf58b6fae1",
+    "game-packages/rummikub/game.json": "7a41014e0bae31b9625d4d39b20d6796a50ced2652ea3d1017dff3a29a50ec86",
+    "game-packages/rummikub/server.txt": "7ce3eb45d6108fbb65f858b5a0ab4a07df913fae1e3829f7f444bbc29c5fe5a8",
+    "game-packages/rummikub/shared.txt": "76c9bf47c2e87f1a108e4de44427d2700b032bd57da7d0013badbd22f4ce2787",
+    "scripts/package-rummikub.mjs": "1a6b0074037cbda71b2d922ec898e0c9ecbded8737644e20c2c0e1e8a29422e5",
+    "scripts/rummikub-package.mjs": "b911e22a10f018fb2921e4b54d5146134f32bed6de9ef6dfba0a036b8a42d1db",
+    "tests/unit/rummikub-package.test.ts": "43e3094fb2f16b61c39717f0fecf1bb53fd81466293be730babf4f54ad7054a2",
+    "docs/games/rummikub.md": "6ec983bf030c959361b68e22ce179ee82034151e782ec62d7253c9ff577983c5",
+    "packages/game-sdk/src/index.ts": "7cac28f2e18b64a995d2980e1d57c4d877387ef1231a83e9f7b877197140a8c3",
+    "apps/api/src/registry/package-runtime.ts": "c92504b1a982e28198d68cf3b598b7cce5f88e7440f2257a7001cb2e919e77c1",
+    "apps/api/src/catalog/game-package.ts": "bf310e4dd4958afe06b91cf14ece1d09a4bfc2859731a983d96687fa02b9a00c",
+    "apps/api/src/catalog/package-art.ts": "b4af59861833180cac85ad873b20c55969a51c475b6413cbba4770ac7bd7dd40",
+    "apps/api/src/errors.ts": "afa3d78ef9c2652db7a91f5644dc00d11684f17b67c48dfcbca4fceb459cddd1"
+  },
+  "adaptations": [
+    "apps/api/src/errors.ts: type-only ErrorCode import points to an extracted platform error-code snapshot"
+  ]
+}
