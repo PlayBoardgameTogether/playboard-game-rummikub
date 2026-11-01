@@ -1,0 +1,13 @@
+{
+  "role": "game-avatar",
+  "source": "icon-source.png",
+  "sourceSha256": "a6e72ce6a28dce40617b246dccdbbd438b9d394f70fedf6a5b04e2cc89c04444",
+  "userSelected": true,
+  "export": "game-packages/rummikub/art/icon.png",
+  "size": [
+    512,
+    512
+  ],
+  "fit": "contain",
+  "backgroundUsage": false
+}
