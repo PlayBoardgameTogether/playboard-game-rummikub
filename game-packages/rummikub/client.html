@@ -527,6 +527,7 @@ dialog .dialog-bottom {
     animation: none !important;
   }
 }
+.player > span, #status { min-width: 0; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
@@ -547,6 +548,12 @@ const colors = ['#ad3f3a', '#296b9d', '#b47721', '#343f48'];
 const colorNames = ['红', '蓝', '橙', '黑'];
 const marks = ['●', '◆', '▲', '■'];
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+let playerNames = {};
+function playerName(seatId, ownSeatId, fallback) {
+  const raw = Object.hasOwn(playerNames, seatId) ? playerNames[seatId] : undefined;
+  const name = typeof raw === 'string' ? raw.trim() : '';
+  return name ? name + (seatId === ownSeatId ? '（你）' : '') : fallback;
+}
 let view = null, busy = true, pending = false, draft = [], selected = [], history = [], order = 'color';
 let localDraft = false;
 const animations = new Set();
@@ -632,24 +639,25 @@ function moveTo(index, prepend = false) {
     draft = rows.filter(row => row.length);
   });
 }
+const seatLabel = seat => playerName(seat, view.you, '玩家 ' + (view.players.findIndex(p => p.seatId === seat) + 1) + (seat === view.you ? ' · 你' : ''));
 function render() {
   if (!view) return;
   const scroll = $('table').scrollTop, rackScroll = $('rack').scrollTop;
   const focusedId = document.activeElement?.dataset?.id;
   $('pool').textContent = '牌堆 ' + view.poolCount;
   $('players').replaceChildren();
-  view.players.forEach((p, index) => {
+  view.players.forEach(p => {
     const el = document.createElement('div'); el.className = 'player' + (p.seatId === view.currentSeat ? ' current' : '');
     const dot = document.createElement('span'); dot.className = 'player-dot';
-    const name = document.createElement('span'); name.textContent = '玩家 ' + (index + 1) + (p.seatId === view.you ? ' · 你' : '');
+    const name = document.createElement('span'); name.textContent = seatLabel(p.seatId);
     const detail = document.createElement('small'); detail.textContent = p.count + ' 张' + (view.finished ? ' · ' + p.score + ' 分' : p.opened ? ' · 已破冰' : ' · 未破冰');
     el.append(dot, name, detail); $('players').append(el);
   });
-  const current = view.players.findIndex(p => p.seatId === view.currentSeat) + 1;
-  $('status').textContent = view.finished ? (view.winners.includes(view.you) ? '你赢了 · ' : '本局结束 · ')
+  const current = seatLabel(view.currentSeat);
+  $('status').textContent = view.finished ? (view.winners.length ? view.winners.map(seatLabel).join('、') + ' 获胜 · ' : '本局结束 · ')
     + (view.blocked ? '牌堆耗尽，按余牌计分' : '有人出完了全部手牌')
     : pending || busy ? '正在同步棋桌…' : view.canAct ? '轮到你 · 整理组合后确认'
-    : view.publicLayout !== null ? '玩家 ' + current + ' 正在整理公共牌 · 尚未确认' : '等待玩家 ' + current + ' 出牌';
+    : view.publicLayout !== null ? current + ' 正在整理公共牌 · 尚未确认' : '等待' + current + ' 出牌';
   $('opening').textContent = view.finished || !view.you ? '' : view.opened ? '可自由重组桌面' : '首次出牌 ≥ 30 分';
   $('table').replaceChildren();
   if (!draft.length) {
@@ -726,6 +734,7 @@ function receive(event) {
   if (!same) { localDraft = false; selected = []; history = []; pending = false; }
   if (!same || !next.canAct || !localDraft) draft = copy(next.publicLayout ?? next.table);
   if (!event.data.busy) pending = false;
+  playerNames = event.data.playerNames && typeof event.data.playerNames === 'object' ? event.data.playerNames : {};
   view = next; busy = Boolean(event.data.busy); render();
   if (live) animate(old, true);
   else if (liveLayout) animate(old);
