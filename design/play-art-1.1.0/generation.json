@@ -1,0 +1,51 @@
+{
+  "version": "1.1.0",
+  "kind": "presentation-art",
+  "generator": "built-in image_gen",
+  "license": "GPL-3.0-only",
+  "rulesChanged": false,
+  "assets": [
+    {
+      "game": "rummikub",
+      "role": "icon",
+      "prompt": "Use case: stylized-concept. NEW original artwork for a premium PlayBoard board game platform. Sophisticated richly detailed fine PIXEL ART, visible tiny square pixel clusters, tactile physical board game pieces, refined material textures, soft daylight, restrained highlights and natural shadows, mature inviting mood, clear readable silhouette. Coordinated natural wood and dark navy with theme-specific colors. No UI, no paragraphs, no title, no brand logo, no watermark, no border. Avoid generic flat vector, blurry painterly style, glossy casino, low detail cartoon. Asset: square 1024x1024 game avatar. Close-up central iconic arrangement of the main game objects, all important edges visible, 8% breathing room, instantly recognizable even at 64px. Subject: ivory rectangular numbered game tiles with small red blue orange and black numerals, wooden tile racks, satisfying ordered sets and runs on navy felt.",
+      "original": "design/play-art-1.1.0/rummikub/icon-original.png",
+      "source": "game-packages/rummikub/art/play-1.1.0/icon.png",
+      "originalSha256": "1d8310c19c3cc9f99951ed31462d8535fe8018f21e4a805d525e5ef7dff8aec9",
+      "sourceSha256": "ccad49a3618991a1268fb1ec88b2bbff015c32c65c4257eec862204decbc5ebe",
+      "webp": "rummikub-icon.webp",
+      "webpSha256": "79994d788a8817638d8ab5d516f2cca58aea7e071b62f1557242d0439e0f9ff7",
+      "width": 512,
+      "height": 512,
+      "bytes": 101270
+    },
+    {
+      "game": "rummikub",
+      "role": "cover",
+      "prompt": "Use case: stylized-concept. NEW original artwork for a premium PlayBoard board game platform. Sophisticated richly detailed fine PIXEL ART, visible tiny square pixel clusters, tactile physical board game pieces, refined material textures, soft daylight, restrained highlights and natural shadows, mature inviting mood, clear readable silhouette. Coordinated natural wood and dark navy with theme-specific colors. No UI, no paragraphs, no title, no brand logo, no watermark, no border. Avoid generic flat vector, blurry painterly style, glossy casino, low detail cartoon. Asset: landscape 16:10 game cover illustration. Compelling low three-quarter close view across the playable board and pieces, a small scene that makes the viewer want to sit down and play, strong foreground focal point, room to crop safely. Subject: ivory rectangular numbered game tiles with small red blue orange and black numerals, wooden tile racks, satisfying ordered sets and runs on navy felt.",
+      "original": "design/play-art-1.1.0/rummikub/cover-original.png",
+      "source": "game-packages/rummikub/art/play-1.1.0/cover.png",
+      "originalSha256": "f4a3c9a8b9dca42ab4af3de60351e154937b031dc31dd08ebeed5cfc5df6d2ed",
+      "sourceSha256": "9a45fc8dcd47f2b408df9bea39a3e01307a8280853c72d5265cf25a6c8227877",
+      "webp": "rummikub-cover.webp",
+      "webpSha256": "9bd14619fa0bc1e4fa8610d7abdc733f9bdf511a5e4b21d880e7929aedac43fd",
+      "width": 960,
+      "height": 600,
+      "bytes": 208758
+    },
+    {
+      "game": "rummikub",
+      "role": "background",
+      "prompt": "Use case: stylized-concept. NEW original artwork for a premium PlayBoard board game platform. Sophisticated richly detailed fine PIXEL ART, visible tiny square pixel clusters, tactile physical board game pieces, refined material textures, soft daylight, restrained highlights and natural shadows, mature inviting mood, clear readable silhouette. Coordinated natural wood and dark navy with theme-specific colors. No UI, no paragraphs, no title, no brand logo, no watermark, no border. Avoid generic flat vector, blurry painterly style, glossy casino, low detail cartoon. Asset: wide 16:9 immersive background original art. Rich thematic environment extending around a softly lit tabletop in the foreground, detailed atmosphere at the edges, calm low contrast central area suitable behind game UI, no embedded interface. Subject: ivory rectangular numbered game tiles with small red blue orange and black numerals, wooden tile racks, satisfying ordered sets and runs on navy felt.",
+      "original": "design/play-art-1.1.0/rummikub/background-original.png",
+      "source": "game-packages/rummikub/art/play-1.1.0/background.png",
+      "originalSha256": "f8c5f576eca9d6021c95a8ea23def8ba75d83e8eedf43e7520aeb1c9fb410fbc",
+      "sourceSha256": "63e468c41da021a28d816786f01791b2aea3724f9a68f857b0cdb4b3dff8dd19",
+      "webp": "rummikub-background.webp",
+      "webpSha256": "3dad0362fce11b52ac93431afa65ff59db8939c158318c10c7eb1a82e715f455",
+      "width": 1280,
+      "height": 720,
+      "bytes": 338478
+    }
+  ]
+}

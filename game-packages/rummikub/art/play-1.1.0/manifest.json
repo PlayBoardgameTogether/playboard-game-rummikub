@@ -1,0 +1,29 @@
+{
+  "version": "1.1.0",
+  "kind": "presentation-art",
+  "game": "rummikub",
+  "ruleVersionUnchanged": true,
+  "assets": [
+    {
+      "role": "icon",
+      "file": "icon.png",
+      "sha256": "ccad49a3618991a1268fb1ec88b2bbff015c32c65c4257eec862204decbc5ebe",
+      "width": 512,
+      "height": 512
+    },
+    {
+      "role": "cover",
+      "file": "cover.png",
+      "sha256": "9a45fc8dcd47f2b408df9bea39a3e01307a8280853c72d5265cf25a6c8227877",
+      "width": 960,
+      "height": 600
+    },
+    {
+      "role": "background",
+      "file": "background.png",
+      "sha256": "63e468c41da021a28d816786f01791b2aea3724f9a68f857b0cdb4b3dff8dd19",
+      "width": 1280,
+      "height": 720
+    }
+  ]
+}
